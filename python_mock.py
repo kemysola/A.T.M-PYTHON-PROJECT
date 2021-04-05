@@ -48,10 +48,22 @@ def register():
         print('invalid option! Kindly enter a valid option')
 
 def bankOperation():
-    bank_options =int(input("What would you like to do? 1(Balance) 2(Withdraw) 3(Transfer) 5(Pay Bills) 6(Recharge) \n"))
-    
-    
-    
+    bank_options =int(input("What would you like to do? 1(Balance) 2(Withdraw) 3(Transfer) 4(Recharge) \n"))
+    if(bank_options ==1):
+        print('Account Balance is .....')
+    elif(bank_options ==2):
+        withdrawal =int(input('Kindly enter the amount \n'))
+        print('Sucessful')
+    elif(bank_options == 3):
+        bank_options =int(input('Kindly select the bank you want to transfer to 1(Zenith Bank) 2(Access Bank) 3(Gtb) 4(More)'))
+        selected_options = input('kindly enter the account number')
+        print('sucessful')
+    elif(bank_options ==4):
+        mobile = input('Kindly enter your mobile number: \n')
+        print('Sucessful')
+    else:
+        print('This is not a valid option')
+        
 def generationAccountNumber():
     return random.randrange(1111111111, 9999999999)
 init()
